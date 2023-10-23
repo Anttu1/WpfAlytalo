@@ -1,0 +1,160 @@
+﻿<Window x:Name="Alytalo" x:Class="WpfAlytalo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAlytalo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="412" Width="677">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid RenderTransformOrigin="0.468,0.498">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="61*"/>
+            <ColumnDefinition Width="285*"/>
+            <ColumnDefinition Width="363*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="97*"/>
+            <RowDefinition Height="46*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Margin="2,-2,21,2"/>
+        <Label x:Name="lblA" Grid.Column="1" Content="Ä L Y T A L O" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="41" Margin="209,0,0,0" VerticalAlignment="Top" Width="166" FontSize="22" FontFamily="Elephant" Cursor="Arrow">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF232222" Offset="1"/>
+                    <GradientStop Color="#FFF6F0F0" Offset="0.595"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <DockPanel Grid.Column="5" LastChildFill="False" Grid.Row="1"/>
+        <Button x:Name="btnLightsOffKitchen" HorizontalAlignment="Left" Height="29" Margin="32,99,0,0" VerticalAlignment="Top" Width="40" BorderBrush="#FF080808" Grid.ColumnSpan="2" RenderTransformOrigin="0.655,-0.356" TabIndex="2" Background="#FFF6F4F4" FontSize="16" FontFamily="Cascadia Code" Content="OFF" Click="btnLightsOffKitchen_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF0E0E0E" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+        </Button>
+        <Label x:Name="lblKitchenLights" Grid.Column="1" Content="Keittiön valot" HorizontalAlignment="Left" Margin="40,35,0,0" VerticalAlignment="Top" Height="31" Width="144" FontSize="16" FontFamily="Stencil">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFAF9F9"/>
+                    <GradientStop Color="#FF6F6D6D" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Slider x:Name="sldrKitchen" Grid.Column="1" HorizontalAlignment="Left" Height="20" Margin="26,75,0,0" VerticalAlignment="Top" Width="178" Maximum="100" ValueChanged="sldrKitchen_ValueChanged" SmallChange="1" TickFrequency="0" LargeChange="20"/>
+        <Label x:Name="lblLRoom" Grid.Column="1" Content="Olohuoneen valot" HorizontalAlignment="Left" Height="28" Margin="29,153,0,0" VerticalAlignment="Top" Width="175" FontSize="16" FontFamily="Stencil">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF090909" Offset="0.457"/>
+                    <GradientStop Color="#FF595858" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <StackPanel Margin="1,123,284,4" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnLightsOnLRoom" HorizontalAlignment="Left" Height="29" Margin="32,185,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="-1.128,0.501" BorderBrush="#FF0F0F0F" Grid.ColumnSpan="2" TabIndex="3" Background="#FFF9F4F4" Content="ON" FontFamily="Cascadia Code" FontSize="16" Click="btnLightsOnLRoom_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="btnLightsOffLRoom" HorizontalAlignment="Left" Height="29" Margin="32,218,0,0" VerticalAlignment="Top" Width="40" BorderBrush="#FF161515" Grid.ColumnSpan="2" RenderTransformOrigin="0.655,-0.356" TabIndex="0" Background="#FFF9F5F5" FontFamily="Cascadia Code" FontSize="16" Content="OFF" Click="btnLightsOffLRoom_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Slider x:Name="sldrLRoom" Grid.Column="1" HorizontalAlignment="Left" Height="20" Margin="26,194,0,0" VerticalAlignment="Top" Width="178" Maximum="100" ValueChanged="sldrLRoom_ValueChanged" SmallChange="1" TickFrequency="0"/>
+        <Label x:Name="lblHeating" Grid.Column="1" Content="Asunnon lämpötila" HorizontalAlignment="Left" Height="30" Margin="25,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="159" FontFamily="Stencil" FontSize="14">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF686666" Offset="1"/>
+                    <GradientStop Color="Black" Offset="0"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <TextBox x:Name="txtWantedHeat" HorizontalAlignment="Left" Height="22" Margin="172,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="58" Grid.Column="1" BorderBrush="#FFC3C4C8" TextAlignment="Center" TabIndex="5"/>
+        <Label x:Name="lblWantedHeat" Content="Aseta tähän haluamasi lämpötila:" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="27" Margin="13,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="217" RenderTransformOrigin="0.5,0.5" FontFamily="SimSun-ExtB">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.486"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.492"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="lblCurrentHeat" Content="Tämänhetkinen lämpötila:" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="27" Margin="35,85,0,0" Grid.Row="1" VerticalAlignment="Top" Width="186" RenderTransformOrigin="0.5,0.5" FontFamily="SimSun-ExtB">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.486"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.492"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox x:Name="txtCurrentHeat" HorizontalAlignment="Left" Height="22" Margin="172,84,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" Grid.Column="1" BorderBrush="#FFCACACB" TextAlignment="Center" Text="20"/>
+        <TextBox x:Name="txtLRoomLights" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="209,190,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="52" TextAlignment="Center"/>
+        <TextBox x:Name="txtKitchenLights" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="209,72,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="52" TextAlignment="Center"/>
+        <Label x:Name="lblSauna" Grid.Column="2" Content="Sauna" HorizontalAlignment="Left" Height="34" Margin="168,49,0,0" VerticalAlignment="Top" Width="117" FontSize="24" FontFamily="Stencil">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF9F9F9"/>
+                    <GradientStop Color="#FF585454" Offset="0.957"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Button x:Name="btnSaunaOff" Grid.Column="2" Content="  Pois&#xD;&#xA; Päältä" HorizontalAlignment="Left" Height="52" Margin="223,134,0,0" VerticalAlignment="Top" Width="90" Background="#FFFFFCFC" FontSize="15" FontFamily="SimSun-ExtB" Click="btnSaunaOff_Click" TabIndex="8" BorderBrush="#FF535252">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="btnSaunaOn" Grid.Column="2" Content="Päällä" HorizontalAlignment="Left" Height="52" Margin="110,134,0,0" VerticalAlignment="Top" Width="90" Background="#FFFCFCFC" BorderBrush="#FF595656" FontSize="15" FontFamily="SimSun-ExtB" Click="btnSaunaOn_Click" TabIndex="7">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Label x:Name="lblSaunaLampo" Grid.Column="2" Content="Saunan lämpötila: " HorizontalAlignment="Left" Height="32" Margin="120,211,0,0" VerticalAlignment="Top" Width="148" FontSize="14" FontFamily="SimSun-ExtB" RenderTransformOrigin="0.826,0.595"/>
+        <TextBox x:Name="txtSaunaLampo" Grid.Column="2" HorizontalAlignment="Left" Height="26" Margin="247,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" BorderBrush="#FFC4C5C8" FontSize="14" TextAlignment="Center" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.185"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Button x:Name="btnEnergyInfo" Grid.Column="2" Content="Näytä kaikki tiedot" HorizontalAlignment="Left" Height="55" Margin="134,40,0,0" Grid.Row="1" VerticalAlignment="Top" Width="179" Background="#FFD9D5D5" Foreground="#FFFA2828" BorderBrush="#FF929090" FontSize="14" FontFamily="SimSun-ExtB" Click="btnEnergyInfo_Click"/>
+        <Button x:Name="btnSetHeat" Grid.Column="1" Content="Aseta" HorizontalAlignment="Left" Height="22" Margin="235,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="48" FontFamily="Cascadia Mono Light" Foreground="#FFED0808" BorderBrush="#FF8C8989" Click="btnSetHeat_Click" TabIndex="6" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnLightsOnKitchen" HorizontalAlignment="Left" Height="29" Margin="32,66,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="-1.128,0.501" Grid.ColumnSpan="2" TabIndex="1" BorderBrush="#FF1D1C1C" Foreground="#FF0E0D0D" Background="#FFF4EFEF" Content="ON" FontFamily="Cascadia Code" FontSize="16" Click="btnLightsOnKitchen_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="btnStopSauna" Grid.Column="2" Content="STOP" HorizontalAlignment="Left" Height="22" Margin="184,99,0,0" VerticalAlignment="Top" Width="56" FontFamily="Cascadia Code" FontSize="14" BorderBrush="#FF2D2B2B" Click="btnStopSauna_Click_1">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF5C0303"/>
+                    <GradientStop Color="#FFFD4848" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnClearAll" Grid.Column="2" Content="Clear All" HorizontalAlignment="Left" Height="28" Margin="68,67,0,0" Grid.Row="1" VerticalAlignment="Top" Width="61" FontSize="9" FontFamily="Cascadia Code Light" Foreground="#FFE91515" Click="btnClearAll_Click" Background="#FFEBE3E3"/>
+
+    </Grid>
+</Window>
